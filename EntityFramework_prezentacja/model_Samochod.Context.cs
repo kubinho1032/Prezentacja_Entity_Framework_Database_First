@@ -19,7 +19,11 @@ namespace EntityFramework_prezentacja
             : base("name=Entities")
         {
         }
-    
+
+        public Entities(string connectionString)
+            : base(connectionString)
+        { }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

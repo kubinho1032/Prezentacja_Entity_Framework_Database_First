@@ -15,6 +15,7 @@ namespace EntityFramework_prezentacja
         public Okno_dodawania()
         {
             InitializeComponent();
+            zmien_baze();
         }
 
         private void btn_dodaj_Click(object sender, EventArgs e)
@@ -50,5 +51,17 @@ namespace EntityFramework_prezentacja
         {
             this.Close();
         }
+
+        private void zmien_baze()
+        {
+           
+
+            using (var samochody = new Entities(db_helper.change_db()))
+            {
+                SAMOCHODY s1 = (SAMOCHODY)samochody.SAMOCHODY.Where(x => x.MARKA == "Nissan").First();
+                MessageBox.Show(s1.MARKA);
+            }
+          }
+        }
     }
-}
+

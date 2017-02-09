@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model_SamochodyStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="SAMOCHODY">
+      <EntityTypeMapping TypeName="Model_Samochody.SAMOCHODY">
+        <MappingFragment StoreEntitySet="SAMOCHODY">
+          <ScalarProperty Name="ID_SAMOCHOD" ColumnName="ID_SAMOCHOD" />
+          <ScalarProperty Name="MARKA" ColumnName="MARKA" />
+          <ScalarProperty Name="ROK_PRODUKCJI" ColumnName="ROK_PRODUKCJI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
